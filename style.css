@@ -1,9 +1,16 @@
 body{
 	padding: 0;
-	margin: 0;	
+	margin: 0;
 	width:100vw;
-	height: 100vh;	
+	height: 100vh;
 }
+
+.kant{
+	border: 2px solid black;
+	border-radius: 5px;
+}
+
+
 .panel{
 	height: 100vh;
 	display: flex;
@@ -14,45 +21,40 @@ body{
 .question-container{
 	margin: 10px;
 	padding: 5px;
-	width: 80vw;
+	width: 40vw;
 	height: 10vh;
 	background-color: #c7dddf;
 	font-size: x-large;
 	text-align: center;
-	
+
 }
-.result{
-	margin: 10px;
-	padding: 5px;
-	width:80vw;
-	height: 10vh;
-	text-align: center;
-	font-size: 50px;
-	
-}
+
+
 .option-container{
 	display: flex;
-	justify-content: space-around;
 	margin: 10px;
 	padding: 5px;
-	width: 80vw;
-	height: 20vh;
-	background-color: #9eb1b3;
-		
-}
-.option{	
-	padding: 10px;
-	width: 15vw;
+	width: 40vw;
 	height: 10vh;
-	font-size: larger;
-	background-color: lightskyblue;
-	border-radius: 25%;
+	background-color: white;
+	justify-content: center;
+
+}
+.option{
+	list-style: none;
+	margin: 5px 10px 0;
+	padding: 5px 10px 5px 10px;
+	text-align: center;
+	font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, sans-serif;
+	font-size: 15px;
+	border-radius: 5px;
+	border: 1px solid rgb(5, 0, 4);
 }
 .option:hover{
 	background-color: lightgoldenrodyellow;
 }
 .navigation{
-	width: 80vw;
+	width: 40vw;
 	height: 10vh;
 	margin: 10px;
 	padding: 5px;
@@ -61,17 +63,20 @@ body{
 	background-color:#c7dddf;
 }
 
-.evaluate,.next{
-	width:30vw;
+.next{
+	width: 10vw;
 	height: 8vh;
 	padding: 5px;
 	font-size: larger;
-}
-.evaluate{
-	
-	background-color: #50DBB4;
-}
-.next{
 	color: white;
 	background-color: #BF3325;
+	border-radius: 25%;
 }
+
+.next:hover{
+	background-color: lightgoldenrodyellow;
+}
+
+.evaluate{
+}
+
