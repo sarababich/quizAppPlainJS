@@ -44,9 +44,6 @@ async function iterate(id) {
     const data = await res.json()
     console.log(data)
 
-// Getting the result display section
-var result = document.getElementsByClassName("result");
-result[0].innerText = "";
 
 // Getting the question
 const question = document.getElementById("question");
@@ -102,20 +99,66 @@ op4.addEventListener("click", () => {
     selected = op4.value;
 })
     
-// Grabbing the evaluate button
-const evaluate = document.getElementsByClassName("evaluate");
+    // Showing the colors on option based on answer green or red
+    let btn = document.getElementById('op1');
+    let btn1 = document.getElementById('op2');
+    let btn2 = document.getElementById('op3');
+    let btn3 = document.getElementById('op4');
 
-// Evaluate method
-evaluate[0].addEventListener("click", () => {
-    if (selected == "true") {
-        result[0].innerHTML = "True";
-        result[0].style.color = "green";
-    } else {
-        result[0].innerHTML = "False";
-        result[0].style.color = "red";
-    }
-})
-} //ITERATE CLOSe
+    btn.addEventListener('click', function onClick() {
+        if (selected == "true") {
+            btn.style.backgroundColor = 'green';
+            btn.style.color = 'white';
+
+
+        } else {
+            btn.style.backgroundColor = 'red';
+            btn.style.color = 'white';
+
+
+        }
+    })
+    btn1.addEventListener('click', function onClick() {
+        if (selected == "true") {
+            btn1.style.backgroundColor = 'green';
+            btn1.style.color = 'white';
+
+
+        } else {
+            btn1.style.backgroundColor = 'red';
+            btn1.style.color = 'white';
+
+
+        }
+    })
+    btn2.addEventListener('click', function onClick() {
+        if (selected == "true") {
+            btn2.style.backgroundColor = 'green';
+            btn2.style.color = 'white';
+
+
+        } else {
+            btn2.style.backgroundColor = 'red';
+            btn2.style.color = 'white';
+
+
+        }
+    })
+    btn3.addEventListener('click', function onClick() {
+        if (selected == "true") {
+            btn3.style.backgroundColor = 'green';
+            btn3.style.color = 'white';
+
+
+        } else {
+            btn3.style.backgroundColor = 'red';
+            btn3.style.color = 'white';
+
+
+        }
+    })
+}
+//ITERATE CLOSe
 
 if (start) {
 iterate("0");
