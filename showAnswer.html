@@ -1,0 +1,51 @@
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+     <!-- Vue kod, -->
+    <script src="https://unpkg.com/vue@3"></script>
+    <script>
+        let Vue;
+        const app = Vue.createApp({
+            data() {
+                return {
+                    msg: 'Question and Answers'
+                }
+            },
+            mounted(){
+                fetch('http://localhost:3000/api/quiz/')
+                    .then((response) => {
+                        return response.json();
+                    })
+                    .then((data) => {
+                        console.log(data);
+                        this.quizQuestion = data.question;
+                    });
+            },
+            computed: {
+                filteredList()
+                {
+                    return this.quizAnswer.filter(question => {
+                        return question.quizAnswer.toLowerCase().includes(this.search.toLowerCase())
+                    })
+                }
+            }
+
+        }).mount('#app')
+    </script>
+
+
+    <!-- Vue Script -->
+    <script src="fetch-answer.js"></script>
+
+
+</div>
+</body>
+</html>
