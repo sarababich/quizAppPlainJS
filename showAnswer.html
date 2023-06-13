@@ -8,6 +8,8 @@
 </head>
 
 
+<ul id="quiz"></ul>
+
 <body>
      <!-- Vue kod, -->
     <script src="https://unpkg.com/vue@3"></script>
@@ -16,7 +18,9 @@
         const app = Vue.createApp({
             data() {
                 return {
-                    msg: 'Question and Answers'
+                    msg: 'quiz in library',
+                    quizQuestion: [],
+
                 }
             },
             mounted(){
@@ -26,14 +30,14 @@
                     })
                     .then((data) => {
                         console.log(data);
-                        this.quizQuestion = data.question;
+                        this.quizQuestion = data.quizQuestion;
                     });
             },
             computed: {
                 filteredList()
                 {
-                    return this.quizAnswer.filter(question => {
-                        return question.quizAnswer.toLowerCase().includes(this.search.toLowerCase())
+                    return this.quizQuestion.filter(question => {
+                        return question.quizQuestion.toLowerCase().includes(this.search.toLowerCase())
                     })
                 }
             }
@@ -45,6 +49,10 @@
     <!-- Vue Script -->
     <script src="fetch-answer.js"></script>
 
+
+</div>
+</body>
+</html>
 
 </div>
 </body>
