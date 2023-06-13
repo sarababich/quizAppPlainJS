@@ -12,9 +12,9 @@
 
 <body>
      <!-- Vue kod, -->
-    <script src="https://unpkg.com/vue@3"></script>
+     <script src="https://unpkg.com/vue@3"></script>
+
     <script>
-        let Vue;
         const app = Vue.createApp({
             data() {
                 return {
@@ -24,7 +24,7 @@
                 }
             },
             mounted(){
-                fetch('http://localhost:3000/api/quiz/')
+                fetch('http://localhost:3000/api/quiz')
                     .then((response) => {
                         return response.json();
                     })
@@ -51,5 +51,7 @@
 
 
 </div>
+</body>
+</html>
 </body>
 </html>
