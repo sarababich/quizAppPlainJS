@@ -1,4 +1,4 @@
-function createNode(element) {
+nction createNode(element) {
     return document.createElement(element);
 }
 
@@ -17,7 +17,7 @@ fetch(url)
     .then(function(data) {
         console.log(data.quizQuestion);
         let question = data.quizQuestion;
-        return quizQuestion.map(function(question)
+        return question.map(function(question)
         {
             let li = createNode('li');
             li.innerHTML = question.quizQuestion;
