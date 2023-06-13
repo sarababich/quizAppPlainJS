@@ -20,7 +20,7 @@ fetch(url)
         return quizQuestion.map(function(question)
         {
             let li = createNode('li');
-            li.innerHTML = question.quizQuestion + question.quizAnswer;
+            li.innerHTML = question.quizQuestion;
             append(ul, li);
         })
     })
